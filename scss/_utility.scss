@@ -1,0 +1,112 @@
+.container {
+  max-width: $main-width;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 1.5rem;
+}
+%btn-shared {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  cursor: pointer;
+  transition: all 0.5s;
+  margin-top: 1rem;
+}
+.btn {
+  &-light {
+    @extend %btn-shared;
+    background-color: $light-color;
+    color: $dark-color;
+    transition: all 0.4s;
+    &:hover {
+      background-color: $main-color;
+    }
+  }
+  &-main {
+    @extend %btn-shared;
+    background-color: $main-color;
+    color: $dark-color;
+  }
+  &-dark {
+    @extend %btn-shared;
+    background-color: $dark-color;
+    color: $light-color;
+    transition: all 0.4s;
+    &:hover {
+      background-color: $main-color;
+      color: #fff;
+    }
+  }
+}
+.lead {
+  font-size: 1.3rem;
+  margin: 1rem 0 2rem 0;
+  text-align: center;
+}
+.text-center {
+  text-align: center;
+}
+//padding
+.py {
+  &-1 {
+    padding: 1rem 0;
+  }
+  &-2 {
+    padding: 2rem 0;
+  }
+  &-3 {
+    padding: 3rem 0;
+  }
+  &-4 {
+    padding: 4rem 0;
+  }
+}
+//margin
+
+.my {
+  &-1 {
+    margin: 1rem 0;
+  }
+  &-2 {
+    margin: 2rem 0;
+  }
+  &-3 {
+    margin: 3rem 0;
+  }
+  &-4 {
+    margin: 4rem 0;
+  }
+}
+
+// background color
+
+.bg {
+  &-main {
+    background-color: $main-color;
+    color: set-text-color($main-color);
+  }
+  &-light {
+    background-color: $light-color;
+    color: set-text-color($light-color);
+  }
+  &-dark {
+    background-color: $dark-color;
+    color: set-text-color($dark-color);
+  }
+  &-medium {
+    background-color: $medium-color;
+    color: set-text-color($medium-color);
+  }
+}
+
+.section-title {
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-weight: 200;
+  text-align: center;
+}
+.bottom-line {
+  height: 2px;
+  width: 4rem;
+  background: $main-color;
+  margin: 0 auto;
+}
